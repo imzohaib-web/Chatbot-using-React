@@ -1,0 +1,15 @@
+ * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        height: 100hv;
+      }
+
+      body {
+        font-family: 'DM Sans', sans-serif;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
