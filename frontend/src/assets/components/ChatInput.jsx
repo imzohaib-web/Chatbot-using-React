@@ -5,6 +5,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
   const [inputText, setInputText] = React.useState('');
   const [isLoading, setIsLoading] = React.useState(false);
   const [provider, setProvider] = React.useState('gemini');
+  const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
   async function sendMessage() {
     if (!inputText.trim() || isLoading) return;
@@ -19,7 +20,7 @@ function ChatInput({ chatMessages, setChatMessages }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/chat', {
+      const response = await fetch(`${API_URL}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMessage, provider: provider })
