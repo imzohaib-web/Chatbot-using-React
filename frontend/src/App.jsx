@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ChatInput } from './assets/components/ChatInput';
+import ChatInput from './assets/components/ChatInput';
 import  ChatMessages  from './assets/components/ChatMessages';
 import './App.css'
 

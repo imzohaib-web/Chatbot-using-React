@@ -60,3 +60,18 @@
 .chat-input-area button:active {
   transform: scale(0.97);
 }
+.chat-input-area select {
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  background: #f7f7f7;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+}
+
+.chat-input-area select:focus {
+  border-color: #2e7d32;
+}

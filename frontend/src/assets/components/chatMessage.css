@@ -1,0 +1,143 @@
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  animation: fadeUp 0.25s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.chat-message.user {
+  flex-direction: row-reverse;
+}
+
+.chat-message img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.bubble {
+  max-width: 72%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* User bubble */
+.chat-message.user .bubble {
+  background: #e8f5e9;
+  color: #1a1a1a;
+  border-bottom-right-radius: 4px;
+}
+
+/* Robot bubble */
+.chat-message.robot .bubble {
+  background: #f4f4f4;
+  color: #1a1a1a;
+  border-bottom-left-radius: 4px;
+}
+
+/* Markdown inside robot bubble */
+.chat-message.robot .bubble p {
+  margin: 0 0 10px 0;
+}
+
+.chat-message.robot .bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-message.robot .bubble strong {
+  font-weight: 600;
+  color: #111;
+}
+
+.chat-message.robot .bubble ul,
+.chat-message.robot .bubble ol {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.chat-message.robot .bubble li {
+  margin-bottom: 4px;
+}
+
+.chat-message.robot .bubble h1,
+.chat-message.robot .bubble h2,
+.chat-message.robot .bubble h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 12px 0 6px 0;
+  color: #111;
+}
+
+.chat-message.robot .bubble code {
+  background: #e0e0e0;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+}
+
+.chat-message.robot .bubble pre {
+  background: #1e1e1e;
+  color: #f8f8f2;
+  padding: 12px 16px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 10px 0;
+  font-size: 13px;
+  font-family: 'Courier New', monospace;
+  line-height: 1.5;
+}
+
+.chat-message.robot .bubble pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+.chat-message.robot .bubble blockquote {
+  border-left: 3px solid #2e7d32;
+  margin: 8px 0;
+  padding-left: 12px;
+  color: #555;
+}
+
+.chat-message.robot .bubble a {
+  color: #2e7d32;
+  text-decoration: underline;
+}
+
+.chat-message.robot .bubble hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.chat-message.robot .bubble table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.chat-message.robot .bubble th,
+.chat-message.robot .bubble td {
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.chat-message.robot .bubble th {
+  background: #e8f5e9;
+  font-weight: 600;
+}
