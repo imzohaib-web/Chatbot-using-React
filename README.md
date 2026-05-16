@@ -90,6 +90,3 @@ Request body:
 
 Use `"openrouter"` as the provider to route the message through OpenRouter.
 
-## Security
-
-Do not commit `.env` files or real API keys. Use `.env.example` as the template and keep secrets local.
